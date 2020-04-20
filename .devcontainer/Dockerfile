@@ -6,7 +6,8 @@
 # To fully customize the contents of this image, use the following Dockerfile instead:
 # https://github.com/microsoft/vscode-dev-containers/tree/v0.112.0/containers/typescript-node-12/.devcontainer/Dockerfile
 FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-12
-
+RUN npm install -g @angular/cli
+RUN npm install --save bootstrap@3
 # ** [Optional] Uncomment this section to install additional packages. **
 #
 # ENV DEBIAN_FRONTEND=noninteractive
