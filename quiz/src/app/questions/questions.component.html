@@ -1,9 +1,29 @@
-<p>Here are the questions!</p>
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>dialpad</mat-icon>
+      <span>Redial</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>voicemail</mat-icon>
+      <span>Check voicemail</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+  </mat-menu>
 
+<hr>
+<p>Let's build the quiz!</p>
 <p>
-    Add a question:
-    <input class="form-control" type="text" [(ngModel)]="question">
-    <button class="btn btn-primary" (click)="onClickAddQuestion()">Add Question</button>
-</p>
+    <mat-form-field appearance="fill" style="min-width:500px">
+      <mat-label>Enter a question</mat-label>
+      <input matInput [(ngModel)]="question">
+      <span matSuffix>?</span>
+      <mat-hint>Hint: What's your favorite food?</mat-hint>
+    </mat-form-field><br>
+    <button mat-raised-button color="primary" (click)="onClickAddQuestion()">Submit Question</button>
+  </p>
 
 <p>{{ questionStatus }}<p>
