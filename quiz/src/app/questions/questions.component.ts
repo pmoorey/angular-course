@@ -6,12 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./questions.component.css']
 })
 export class QuestionsComponent implements OnInit {
-  question = ""
+  question = '';
+  questionStatus = '';
   constructor() { }
 
   ngOnInit(): void {
   }
   onInputUpdateQuestion(event: Event) {
     this.question = (<HTMLInputElement>event.target).value;
+  }
+  onClickAddQuestion() {
+    this.questionStatus = 'Added question: '+this.question;
   }
 }
