@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { ParticipantsComponent} from './participants/participants.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { BannerComponent } from './banner/banner.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { BannerComponent } from './banner/banner.component';
     BannerComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

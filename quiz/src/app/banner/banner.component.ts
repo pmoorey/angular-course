@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.css']
 })
-export class BannerComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+export class BannerComponent{
+  get_msg(){
+    return "Welcome to the quiz!"
   }
-
 }

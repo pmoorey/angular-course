@@ -1,1 +1,11 @@
-<p>questions!</p>
+<p>Here are the questions!</p>
+
+<p>
+    Add a question:
+    <input class="form-control" type="text" [(ngModel)]="question">
+    <button class="btn btn-primary">Add Question</button>
+</p>
+
+<ul>
+    <li>{{ question }}</li>
+</ul>
