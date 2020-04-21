@@ -26,4 +26,5 @@
     <button mat-raised-button color="primary" (click)="onClickAddQuestion()">Submit Question</button>
   </p>
 
-<p>{{ questionStatus }}<p>
+<p [ngStyle]="{backgroundColor: 'green'}">{{ questionStatus }}<p>
+<p *ngFor="let q of questions">Question: {{ q }}</p>

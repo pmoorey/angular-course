@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./questions.component.css']
 })
 export class QuestionsComponent implements OnInit {
-  question = '';
+  questions = []
+  question = ''
+
   questionStatus = '';
   constructor() { }
 
@@ -16,6 +18,7 @@ export class QuestionsComponent implements OnInit {
     this.question = (<HTMLInputElement>event.target).value;
   }
   onClickAddQuestion() {
-    this.questionStatus = 'Added question: '+this.question;
+    this.questionStatus = 'Added question: ' + this.question;
+    this.questions.push(this.question);
   }
 }
